@@ -1,5 +1,5 @@
 -- Creación de las tablas
-CREATE TABLE 100mediosPrensa (
+CREATE TABLE mediosPrensa (
   nombre_medio VARCHAR(100) PRIMARY KEY,
   ubicacion VARCHAR(100),
   cobertura VARCHAR(100)
@@ -15,13 +15,13 @@ CREATE TABLE redesSociales (
   seguidores INTEGER,
   actualizacionSeguidores DATE,
   nombre_medio VARCHAR(100),
-  FOREIGN KEY (nombre_medio) REFERENCES 100mediosPrensa(nombre_medio)
+  FOREIGN KEY (nombre_medio) REFERENCES mediosPrensa(nombre_medio)
 );
 
 CREATE TABLE sitioWeb (
   nombre_sitioWeb VARCHAR(100) PRIMARY KEY,
   nombre_medio VARCHAR(100),
-  FOREIGN KEY (nombre_medio) REFERENCES 100mediosPrensa(nombre_medio)
+  FOREIGN KEY (nombre_medio) REFERENCES mediosPrensa(nombre_medio)
 );
 
 CREATE TABLE categoria (
@@ -47,5 +47,5 @@ CREATE TABLE crea (
   nombre_medio VARCHAR(100),
   PRIMARY KEY (nombre_fundadores, nombre_medio),
   FOREIGN KEY (nombre_fundadores) REFERENCES fundador(nombre_fundadores),
-  FOREIGN KEY (nombre_medio) REFERENCES 100mediosPrensa(nombre_medio)
+  FOREIGN KEY (nombre_medio) REFERENCES mediosPrensa(nombre_medio)
 );
