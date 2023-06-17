@@ -1,3 +1,9 @@
+-- Crear la base de datos
+CREATE DATABASE nombre_basedatos;
+
+-- Usar la base de datos
+USE nombre_basedatos;
+
 -- Creación de las tablas
 CREATE TABLE mediosPrensa (
   nombre_medio VARCHAR(100) PRIMARY KEY,
