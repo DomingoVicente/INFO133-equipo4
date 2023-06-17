@@ -1,10 +1,7 @@
--- Crear la base de datos
 CREATE DATABASE nombre_basedatos;
 
--- Usar la base de datos
 USE nombre_basedatos;
 
--- Creación de las tablas
 CREATE TABLE mediosPrensa (
   nombre_medio VARCHAR(100) PRIMARY KEY,
   ubicacion VARCHAR(100),
@@ -47,7 +44,6 @@ CREATE TABLE noticia (
   FOREIGN KEY (nombre_sitioWeb) REFERENCES sitioWeb(nombre_sitioWeb)
 );
 
--- Creación de la tabla de relación entre fundadores y medios de prensa
 CREATE TABLE crea (
   nombre_fundadores VARCHAR(100),
   nombre_medio VARCHAR(100),
