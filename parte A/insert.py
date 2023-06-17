@@ -4,20 +4,16 @@ este script permite a un usuario insertar un nuevo medio de prensa en la base de
 “Indica una URL de una noticia de este medio”
 “Indica la expresión XPATH que permite leer el título de la fecha”
 
-'''
-
-
-
-
+''
 
 import mysql.connector
 
 # Establecer la conexión con la base de datos
 conn = mysql.connector.connect(
-    host='tu_host',
-    user='tu_usuario',
-    password='tu_contraseña',
-    database='tu_base_de_datos'
+    host='local@host',
+    user='Vicente',
+    password='Vicente2',
+    database='mediosPrensa'
 )
 cursor = conn.cursor()
 
